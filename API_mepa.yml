@@ -5,8 +5,36 @@ info:
 servers:
   - url: https://www.acquistinretepa.it/integration-marketplace-cloud-mepa/api/v1
 paths:
-  /test:
-    get:
+  /qualified-cloud-services:
+    post:
       responses:
+        '201':
+          description: created
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+        '409':
+          description: conflict
+          
+    delete:
+      responses:        
         '200':
-          description: OK
+          description: ok
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+        '404':
+          description: not found
+
+    patch: 
+      responses:        
+        '200':
+          description: ok
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+        '404':
+          description: not found
